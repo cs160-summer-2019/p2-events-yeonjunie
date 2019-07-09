@@ -30,8 +30,14 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="shape-container">
+          <div class="p2-circle bg-blue"></div>
+            
+          
 					<!-- Dynamically add your circles here! -->
+          
 					<!-- Example circle: <div class="p2-circle bg-blue"></div> -->
+          
+    
 				</div>
 			</div>
 		</div>
@@ -39,7 +45,15 @@
 
 
 <script type="text/javascript">
-
+  var funk = setInterval(timerFunc, 1000);
+  function timerFunc() {
+    
+    $( '.shape-container' ).append( '<div class="p2-circle bg-blue"></div>' );
+    
+  }
+  $('.btn').on('click',() => {
+    clearInterval(funk);
+  });
 	// your solution here
 
 </script>
